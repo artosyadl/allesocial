@@ -1,0 +1,23 @@
+// header
+//-----------------------------------------------------------------------------------
+.header
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 100500
+  ul
+    display: inline-block
+    @extend %vafix
+    li
+      float: left
+      margin-right: 32px
+      &:last-child
+        margin-right: 0
+    a
+      display: inline-block
+      color: #ffffff
+      font-family: $open
+      font-size: 18px
+      font-weight: 300
+      line-height: 21px
