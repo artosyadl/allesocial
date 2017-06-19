@@ -643,7 +643,8 @@ html {
   position: relative;
   background: url(../images/bg-contact.png) no-repeat center/cover; }
   .contact .el__title {
-    color: white; }
+    color: white;
+    margin-bottom: 45px; }
   .contact .text-style-1 {
     color: white; }
   .contact .list-cont {
