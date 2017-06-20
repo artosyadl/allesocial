@@ -2,9 +2,7 @@
 </head>
 
 <body>
-<!-- Begin svg -->
-<include src="../chunks/svg.html"></include>
-<!-- End svg -->
+
 <div id="page-wrapper" class="page-wrapper">
 
     <!-- Begin header -->
@@ -14,11 +12,11 @@
     <!-- Begin page body -->
     <div id="page-body" class="page-body">
         <div class="home" id="home">
-            <div class="item__wrap" style="background: #f3f3f3 url(../images/bg-home.png) no-repeat center/cover">
+            <div class="item__wrap" style="background: #f3f3f3 url(images/bg-home.png) no-repeat center/cover">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <h1>CAN’T KEEP UP WITH YOU SOCIAL <span>NETWORK PROFILES?</span></h1>
+                            <h1>CAN’T KEEP UP WITH YOU SOCIAL <span>NETWORK PROFILES?</span></h1>
                         </div>
                         <div class="col-md-12 text-center">
                             <ul class="list-link">
@@ -36,10 +34,10 @@
                             </ul>
                         </div>
                         <div class="col-md-12 text-center">
-                            <p><a href="#" class="el__btn">Start a free trial</a></p>
-                            <i class="fa fa-angle-left" aria-hidden="true"></i>
-                            <i class="fa fa-angle-right" aria-hidden="true"></i>
-                            <i class="fa fa-home" aria-hidden="true"></i></div>
+                            <p><a href="#modal" class="el__btn mod-white">Start a free trial</a></p>
+                            <!--<i class="fa fa-angle-left" aria-hidden="true"></i>-->
+                            <!--<i class="fa fa-angle-right" aria-hidden="true"></i>-->
+                            <!--<i class="fa fa-home" aria-hidden="true"></i></div>-->
                     </div>
                 </div>
             </div>
@@ -49,42 +47,45 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <h2 class="el__title">The company</h2>
-                            <p class="text-style-1">Australian owned and Australian managed team of social media experts, copyrighters, designers and
-                                SEO specialists are helping Australian businesses to gain, maintain and increase their online exposure.
-                                Effective SMM is all about saving 100’s of hours and putting them back to business. We believe that 
-                                social media is live and changing environment, which requires a personal touch and human interaction. 
-                                Social networks cannot be adequately managed by automated publishing tools or software. Effective 
-                                human communication and engaging your audience is a key to success!
-                                We help you to establish personal contacts and engage prospective customers, buyers and your 
-                                followers on a regular basis.</p>
+                            <div class="wrap-company">
+                                <h2 class="el__title">The company</h2>
+                                <hr>
+                                <p class="text-style-1">
 
-                            <ul class="list__services">
-                                <li>
-                                    <div class="services">
-                                        <div class="img__wrap"><img src="images/us-1.png" alt="img"></div>
-                                        <p>Retail</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="services">
-                                        <div class="img__wrap"><img src="images/us-2.png" alt="img"></div>
-                                        <p>Legal</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="services">
-                                        <div class="img__wrap"><img src="images/us-3.png" alt="img"></div>
-                                        <p>Food</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="services">
-                                        <div class="img__wrap"><img src="images/us-4.png" alt="img"></div>
-                                        <p>Services</p>
-                                    </div>
-                                </li>
-                            </ul>
+                                    Australian owned and Australian managed team of social media experts, copyrighters, designers and SEO specialists are helping Australian businesses to gain, maintain and increase their online exposure. Effective SMM is all about saving 100’s of hours and putting them back to business. We believe that social media is live and changing environment, which requires a personal touch and human interaction.
+                                    Social networks cannot be adequately managed by automated publishing tools or software. Effective
+                                    human communication and engaging your audience is a key to success!
+                                    We help you to establish personal contacts and engage prospective customers, buyers and your followers on a regular basis. <ul class="list__services">
+                                    <li>
+                                        <div class="services"
+                                             style="background: #f3f3f3 url(images/us-bg-1.jpg) no-repeat center/cover">
+                                            <div class="img__wrap"><img src="images/us-1.png" alt="img"></div>
+                                            <p>Retail</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="services"
+                                             style="background: #f3f3f3 url(images/us-bg-2.jpg) no-repeat center/cover">
+                                            <div class="img__wrap"><img src="images/us-2.png" alt="img"></div>
+                                            <p>Legal</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="services"
+                                             style="background: #f3f3f3 url(images/us-bg-3.jpg) no-repeat center/cover">
+                                            <div class="img__wrap"><img src="images/us-3.png" alt="img"></div>
+                                            <p>Food</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="services"
+                                             style="background: #f3f3f3 url(images/us-bg-4.jpg) no-repeat center/cover">
+                                            <div class="img__wrap"><img src="images/us-4.png" alt="img"></div>
+                                            <p>Services</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -94,47 +95,77 @@
                     <div class="row">
                         <div class="col-md-12">
                             <h2 class="el__title">How it works</h2>
-                            <p class="text-style-1">We are Social Media Management Company entrusted with <a href="#">monitoring</a>, <a href="#">contributing</a>, <a
-                                    href="#">filtering</a>,  <a href="#">measuring and 
-                                sustaining social media presence of a brand</a>, <a href="#">product</a>, <a
+                            <p class="text-style-1">We are Social Media Management Company entrusted with <a href="#">monitoring</a>, <a href="#">contributing</a>, <a
+                                    href="#">filtering</a>, <a href="#">measuring and sustaining social media presence of a brand</a>, <a href="#">product</a>, <a
                                     href="#">individual</a> or <a href="#">business</a>.
                             </p>
-                            <p  class="text-style-1">
-                                Online presence is becoming more essential than ever for a business to generate sales. However, not all 
-                                the companies have a dedicated social media and networking expert to manage their daily online 
-                                routine.    
-                                Company page on Facebook is not enough these days to get online exposure.  It takes more than one 
-                                social network to stand out from the crowd.
-                                We only offer ORGANIC traffic and followers.Organic followers vs. Bots 
-                                It is easy to spot poorly marketed account on Instagram. Simply compare number of likes to number of 
-                                followers and number of followed accounts to number of followers. 
-                            </p>
+                            <p class="text-style-1">
 
-                            <p  class="text-style-1">1.
-                                As a guide, an organic account with 20-30k followers will get a standard of 1000-2000 likes per 
-                                photo/post 
-                                anytime of the day and
+                                Online presence is becoming more essential than ever for a business to generate sales. However, not all the companies have a dedicated social media and networking expert to manage their daily online routine.
+                                Company page on Facebook is not enough these days to get online exposure. It takes more than one social network to stand out from the crowd. We only offer ORGANIC traffic and followers. Organic followers vs. Bots It is easy to spot poorly marketed account on Instagram. Simply compare number of likes to number of followers and number of followed accounts to number of followers.
+
                             </p>
-                            <p  class="text-style-1">
-                                2. Number of followed accounts should not be more than 500. If you see 2000 followers and 6000 
-                                followed
-                                accounts that mean there is no strategy and account holder is relying on “follow for 
-                                follow” principal.
-                            </p>
-                            <ul class="list-style">
-                                <li><i class="fa fa-check" aria-hidden="true"></i> Regular posts to all social networks; </li>
-                                <li><i class="fa fa-check" aria-hidden="true"></i> Update groups and company pages with latest and up-to date information about your product 
-                                    or services;  
-                                </li>
-                                <li><i class="fa fa-check" aria-hidden="true"></i> Publish interesting and informative content; </li>
-                                <li><i class="fa fa-check" aria-hidden="true"></i> Interact with followers and members by creating polls and themed discussions;  </li>
-                                <li><i class="fa fa-check" aria-hidden="true"></i> Clean inappropriate comments, spam and negative feedback to create a positive image of the 
-                                    company;
-                                </li>
-                                <li><i class="fa fa-check" aria-hidden="true"></i> Create relevant hashtags and including them in posts; </li>
-                                <li><i class="fa fa-check" aria-hidden="true"></i> Social profile creation and optimisation; </li>
-                                <li><i class="fa fa-check" aria-hidden="true"></i> Develop unique branded design and style for your social media profile; </li>
-                            </ul>
+                            <div class="wrap-center">
+                                <p class="text-style-1">1.
+                                    As a guide, an organic account with 20-30k followers will get a standard of 1000-2000 likes per photo/post
+                                    anytime of the day and
+
+                                </p>
+                                <p class="text-style-1">
+
+                                    2.
+                                    Number of followed accounts should not be more than 500. If you see 2000 followers and 6000 followed
+                                    accounts that mean
+                                    there is no strategy and account holder is relying on “follow for
+                                    follow principal.
+
+                                </p>
+                                <ul class="list-style">
+                                    <li><i class="fa fa-check" aria-hidden="true"></i>
+
+                                        Regular posts to all social networks;
+
+                                    </li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i>
+
+                                        Update groups and company pages with latest and up-to
+                                        date information about your product
+                                        or services;
+
+                                    </li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i>
+
+                                        Publish interesting and informative content;
+
+                                    </li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i>
+
+                                        Interact with followers and members by creating polls and themed discussions;
+
+                                    </li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i>
+
+                                        Clean inappropriate comments, spam and negative feedback to create a positive image of the
+                                        company;
+
+                                    </li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i>
+
+                                        Create relevant hashtags and including them in posts;
+
+                                    </li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i>
+
+                                        Social profile creation and optimisation;
+
+                                    </li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i>
+
+                                        Develop unique branded design and style for your social media profile;
+
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -146,9 +177,7 @@
                     <div class="col-md-12">
                         <h2 class="el__title">Prising</h2>
                         <p class="text-style-1">
-                            We offer four different monthly packages to suit your business needs ranging from a simple profile 
-                            monitoring to complete social media presence. </p>
-
+                            We offer four different monthly packages to suit your business needs ranging from a simple profile monitoring to complete social media presence.</p>
                         <div class="table__wrapper">
                             <table>
                                 <thead>
@@ -219,7 +248,7 @@
                                     <td><span class="check"><i class="fa fa-check" aria-hidden="true"></i></span></td>
                                 </tr>
                                 <tr>
-                                    <td>Dedicated  account
+                                    <td>Dedicated  account<br>
                                         manager
                                     </td>
                                     <td><span class="check"><i class="fa fa-check" aria-hidden="true"></i></span></td>
@@ -228,7 +257,7 @@
                                     <td><span class="check"><i class="fa fa-check" aria-hidden="true"></i></span></td>
                                 </tr>
                                 <tr>
-                                    <td>Cross promotion
+                                    <td>Cross promotion<br>
                                         to Facebook page
                                     </td>
                                     <td><span class="check"><i class="fa fa-check" aria-hidden="true"></i></span></td>
@@ -244,7 +273,7 @@
                                     <td>TBD</td>
                                 </tr>
                                 <tr>
-                                    <td>Profile data
+                                    <td>Profile data<br>
                                         optimisation
                                     </td>
                                     <td><span class="none"><i class="fa fa-times" aria-hidden="true"></i></span></td>
@@ -260,7 +289,7 @@
                                     <td><span class="check"><i class="fa fa-check" aria-hidden="true"></i></span></td>
                                 </tr>
                                 <tr>
-                                    <td>High influencer
+                                    <td>High influencer<br>
                                         research 
                                     </td>
                                     <td><span class="none"><i class="fa fa-times" aria-hidden="true"></i></span></td>
@@ -269,7 +298,7 @@
                                     <td><span class="check"><i class="fa fa-check" aria-hidden="true"></i></span></td>
                                 </tr>
                                 <tr>
-                                    <td>Competitor research
+                                    <td>Competitor research<br>
                                         &  tracking 
                                     </td>
                                     <td><span class="none"><i class="fa fa-times" aria-hidden="true"></i></span></td>
@@ -279,32 +308,33 @@
                                 </tr>
                                 <tr>
                                     <td>Content</td>
-                                    <td>Supplied by client
+                                    <td>Supplied by client<br>
                                         and Instagram
                                     </td>
-                                    <td>Supplied by client
+                                    <td>Supplied by client<br>
                                         and Instagram
                                     </td>
-                                    <td>Supplied by client
+                                    <td>Supplied by client <br>
                                         and Instagram
                                     </td>
-                                    <td>Supplied by client
+                                    <td>Supplied by client <br>
                                         and Instagram
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Custom
+                                    <td>Custom <br>
                                         Infographics 
                                     </td>
                                     <td><span class="none"><i class="fa fa-times" aria-hidden="true"></i></span></td>
                                     <td><span class="none"><i class="fa fa-times" aria-hidden="true"></i></span></td>
-                                    <td><span class="check"><i class="fa fa-check" aria-hidden="true"></i></span> 1 per week</td>
+                                    <td><span class="check"><i class="fa fa-check" aria-hidden="true"></i></span> <br>1 per week
+                                    </td>
                                     <td>TBD</td>
                                 </tr>
                                 </tbody>
                             </table>
-                            <a href="#" class="btn">GET STARTED <img src="images/rocket.png" alt="img"></a>
                         </div>
+                        <a href="#modal" class="btn">GET STARTED <img src="images/rocket.png" alt="img"></a>
                     </div>
                 </div>
             </div>
@@ -312,40 +342,59 @@
         <div class="contact" id="contact">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 text-right">
+                        <ul class="nav">
+                            <li><a class="page-scroll" href="#home">Home</a></li>
+                            <li><a class="page-scroll" href="#company">The company</a></li>
+                            <li><a class="page-scroll" href="#how-it-works">What we do</a></li>
+                            <li><a class="page-scroll" href="#prising">Pricing</a></li>
+                            <li><a class="coll" href="#modal1"><i class="fa fa-volume-control-phone" aria-hidden="true"></i> call back</a></li>
+                            <li><a class="page-scroll" href="#contact">Contact us</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-md-5">
                         <h2 class="el__title">Contact us</h2>
-                        <p class="text-style-1">NEED BRANDED CUSTOM DESIGNED SOCIAL ACCOUNT?  GET A FREE QUOTE NOW.</p>
-                        <p class="text-style-1">Fill in the form below and we will get back to 
-                            you shortly. </p>
+                        <p class="text-style-1">NEED BRANDED CUSTOM DESIGNED SOCIAL ACCOUNT? GET A FREE QUOTE NOW.</p>
+                        <p class="text-style-1">Fill in the form below and we will get back to you shortly. </p>
 
                         <ul class="list-cont">
-                            <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> info@EffectiveSMM.com</a></li>
+                            <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> info@EffectiveSMM.com</a>
+                            </li>
                             <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> @effective_smm</a></li>
                         </ul>
-
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">The company</a></li>
-                            <li><a href="#">What we do</a></li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i> call back</a></li>
-                            <li><a href="#">Contact us</a></li>
-                        </ul>
-
+                    </div>
+                    <div class="col-md-7">
                         <form action="#">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                            <input type="text" placeholder="*Name:">
-                            <i class="fa fa-mobile" aria-hidden="true"></i>
-                            <input type="text" placeholder="*Phone:">
-                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                            <input type="text" placeholder="*Email:">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                            <input type="text" placeholder="*Instagram username:">
-                            <i class="fa fa-info-circle" aria-hidden="true"></i>
-                            <input type="text" placeholder="Subject:">
-                            <i class="fa fa-pencil" aria-hidden="true"></i>
-                            <textarea type="text" placeholder="Message:"></textarea>
-                            <button type="submit">submit your message</button>
+                            <div class="left__form">
+                                <label class="el__input">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <input type="text" placeholder="*Name:">
+                                </label>
+                                <label class="el__input">
+                                    <i class="fa fa-mobile" aria-hidden="true"></i>
+                                    <input type="text" placeholder="*Phone:">
+                                </label>
+                                <label class="el__input">
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                    <input type="text" placeholder="*Email:">
+                                </label>
+                                <label class="el__input">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    <input type="text" placeholder="*Instagram username:">
+                                </label>
+                            </div>
+                            <div class="right__form">
+                                <label class="el__input">
+                                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    <input type="text" placeholder="Subject:">
+                                </label>
+                                <label class="el__input">
+                                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                                    <textarea type="text" placeholder="Message:"></textarea>
+                                </label>
+                                <button type="submit">submit your message</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -358,7 +407,7 @@
     <!-- Begin footer -->
     <include src="../chunks/footer.html"></include>
     <!-- End footer -->
-
+    <include src="../chunks/modal.html"></include>
 </div>
 
 <!-- Begin script -->

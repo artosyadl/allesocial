@@ -5,13 +5,39 @@
   top: 0
   left: 0
   width: 100%
-  z-index: 100500
+  z-index: 10
+  padding: 10px 0
+  @media (max-width: $screen-xs-max)
+    position: absolute
+  &.fixed
+    background-color: #383838
+  .logo
+    display: inline-block
+    @media (max-width: $screen-sm-max)
+      width: auto
+      height: 30px
+      @media (max-width: $screen-xs-max)
+        height: 40px
+      img
+        height: 100%
+        width: auto
   ul
     display: inline-block
     @extend %vafix
+    margin-top: 20px
+    @media (max-width: $screen-sm-max)
+      margin-top: 0
+    @media (max-width: $screen-xs-max)
+      display: none
+
     li
       float: left
-      margin-right: 32px
+      margin-right: 40px
+      cursor: pointer
+      display: inline-block
+      @media (max-width: $screen-sm-max)
+        margin-right: 20px
+
       &:last-child
         margin-right: 0
     a
@@ -21,3 +47,9 @@
       font-size: 18px
       font-weight: 300
       line-height: 21px
+      &.active
+        text-decoration: none
+        color: #ffae00
+      &:hover
+        text-decoration: none
+        color: #ffae00

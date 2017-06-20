@@ -17,3 +17,30 @@ fixedSvg();
 function isOnPage(selector) {
     return ($(selector).length) ? $(selector) : false;
 }
+
+
+$(window).scroll(function(){
+    var $elem = $('.header'),
+        $top = $(this).scrollTop();
+
+    if ($top < 10) {
+        $elem.removeClass('fixed')
+    } else {
+        $elem.addClass('fixed')
+    }
+});
+
+$('.list-link').on('mouseover', 'li', function (e) {
+    e.preventDefault();
+    $('.list-link li').css('opacity', '0.5');
+    $(this).css('opacity', '1');
+    console.log('----- ' + 1);
+
+});
+
+$('.list-link').on('mouseout', 'li', function (e) {
+    e.preventDefault();
+    $('.list-link li').css('opacity', '1');
+    console.log('----- ' + 2);
+
+});

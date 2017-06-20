@@ -1,1 +1,310 @@
 .test{display:block}
+.radio-btn {
+    position: relative;
+    left: 25px;
+}
+.radio-btn:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: -40px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+}
+.radio-btn:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: -25px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    -webkit-transition: all;
+    transition: all;
+    opacity: 0;
+}
+
+.checkbox-btn {
+    position: relative;
+    left: 25px;
+    margin-top: 12px;
+    display: inline-block;
+}
+.checkbox-btn:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: -40px;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 2px solid #FFFFFF;
+}
+.checkbox-btn:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: -15px;
+    width: 15px;
+    height: 15px;
+    background: #FFFFFF;
+    -webkit-transition: all;
+    transition: all;
+    opacity: 0;
+}
+
+.radio-expand[type="radio"]:checked + label::after {
+    -webkit-animation: expandRadioCir .3s linear forwards;
+    animation: expandRadioCir .3s linear forwards;
+}
+
+.radio-explode[type="radio"]:checked + label::before {
+    -webkit-animation: explodeRadioCir .3s linear forwards;
+    animation: explodeRadioCir .3s linear forwards;
+}
+
+.radio-flip[type="radio"]:checked + label::before {
+    -webkit-animation: flipRadioCir .3s linear forwards;
+    animation: flipRadioCir .3s linear forwards;
+}
+
+.radio-fade[type="radio"]:checked + label::before {
+    -webkit-animation: fadeRadioCir .3s linear forwards;
+    animation: fadeRadioCir .3s linear forwards;
+}
+.checkbox-check{
+    position: absolute;
+    opacity: 0 ;
+    visibility: hidden;
+}
+.checkbox-check[type="checkbox"]:checked + label::before {
+    -webkit-animation: checkBtnChk .3s linear forwards;
+    animation: checkBtnChk .3s linear forwards;
+}
+.checkbox-check[type="checkbox"]:checked + label::after {
+    -webkit-animation: checkBtnChk2 .3s linear forwards;
+    animation: checkBtnChk2 .3s linear forwards;
+}
+
+.checkbox-x[type="checkbox"]:checked + label::before {
+    -webkit-animation: checkBtnX .3s linear forwards;
+    animation: checkBtnX .3s linear forwards;
+}
+.checkbox-x[type="checkbox"]:checked + label::after {
+    -webkit-animation: checkBtnX2 .3s linear forwards;
+    animation: checkBtnX2 .3s linear forwards;
+}
+
+/* keyframe for expanding innner circle */
+@-webkit-keyframes expandRadioCir {
+    from {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+@keyframes expandRadioCir {
+    from {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+/* keyframe for exploding innner circle */
+@-webkit-keyframes explodeRadioCir {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        background: #FFFFFF;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+@keyframes explodeRadioCir {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        background: #FFFFFF;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+/* keyframe for radio button flip */
+@-webkit-keyframes flipRadioCir {
+    from {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+    to {
+        background: #FFFFFF;
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+    }
+}
+@keyframes flipRadioCir {
+    from {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+    to {
+        background: #FFFFFF;
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+    }
+}
+/* keyframe for radio button flip */
+@-webkit-keyframes fadeRadioCir {
+    0% {
+        background: transparent;
+    }
+    100% {
+        background: #FFFFFF;
+    }
+}
+@keyframes fadeRadioCir {
+    0% {
+        background: transparent;
+    }
+    100% {
+        background: #FFFFFF;
+    }
+}
+/* keyframe for check button check */
+@-webkit-keyframes checkBtnChk {
+    0% {
+        height: 25px;
+    }
+    100% {
+        top: 10px;
+        left: -30px;
+        height: 0px;
+        -webkit-transform: rotate(-52deg);
+        transform: rotate(-52deg);
+    }
+}
+@keyframes checkBtnChk {
+    0% {
+        height: 25px;
+    }
+    100% {
+        top: 10px;
+        left: -30px;
+        height: 0px;
+        -webkit-transform: rotate(-52deg);
+        transform: rotate(-52deg);
+    }
+}
+/* keyframe for check button check 2 */
+@-webkit-keyframes checkBtnChk2 {
+    from {
+        opacity: 0;
+    }
+    to {
+        top: 15px;
+        left: -33px;
+        height: 5px;
+        width: 10px;
+        opacity: 1;
+        -webkit-transform: rotate(40deg);
+        transform: rotate(40deg);
+    }
+}
+@keyframes checkBtnChk2 {
+    from {
+        opacity: 0;
+    }
+    to {
+        top: 15px;
+        left: -33px;
+        height: 5px;
+        width: 10px;
+        opacity: 1;
+        -webkit-transform: rotate(40deg);
+        transform: rotate(40deg);
+    }
+}
+/* keyframe for check button x */
+@-webkit-keyframes checkBtnX {
+    0% {
+        height: 25px;
+    }
+    100% {
+        top: 10px;
+        left: -40px;
+        height: 0px;
+        -webkit-transform: rotate(-50deg);
+        transform: rotate(-50deg);
+    }
+}
+@keyframes checkBtnX {
+    0% {
+        height: 25px;
+    }
+    100% {
+        top: 10px;
+        left: -40px;
+        height: 0px;
+        -webkit-transform: rotate(-50deg);
+        transform: rotate(-50deg);
+    }
+}
+/* keyframe for check button x 2 */
+@-webkit-keyframes checkBtnX2 {
+    from {
+        opacity: 0;
+    }
+    to {
+        top: 10px;
+        left: -40px;
+        height: 4px;
+        width: 25px;
+        opacity: 1;
+        -webkit-transform: rotate(40deg);
+        transform: rotate(40deg);
+    }
+}
+@keyframes checkBtnX2 {
+    from {
+        opacity: 0;
+    }
+    to {
+        top: 10px;
+        left: -40px;
+        height: 4px;
+        width: 25px;
+        opacity: 1;
+        -webkit-transform: rotate(40deg);
+        transform: rotate(40deg);
+    }
+}

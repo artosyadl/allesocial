@@ -1,2 +1,150 @@
 // plugin
 //-----------------------------------------------------------------------------------
+.remodal
+  box-sizing: border-box
+  border-radius: 11px
+  background-color: rgba(#212121, 0.65)
+  border: 3px solid #ffae00
+  padding: 0
+  overflow: hidden
+  &.modal-thank
+    max-width: 370px
+    border: none
+    border-radius: 11px
+    overflow: hidden
+    .modalTitle
+      background: none
+      color: #ffffff
+      font-family: $open
+      font-weight: 300
+      font-size: 24px
+      padding-bottom: 20px
+    .modalDesc
+      padding-top: 0
+      p
+        color: #ffffff
+        font-family: $open
+        font-weight: 300
+        font-size: 16px
+
+  &.modal-sm
+    max-width: 370px
+    .modalTitle
+      font-family: $open
+      font-size: 16px
+      font-weight: 400
+      text-transform: uppercase
+
+    .modalDesc
+      p
+        color: #ffffff
+        font-family: $open
+        font-size: 14px
+        font-weight: 300
+      form
+        .el__input
+          textarea
+            border-color: white
+        .left__form
+          width: 100%
+  .modalTitle
+    color: #323232
+    font-family: $open
+    font-size: 24px
+    font-weight: 300
+    line-height: 21px
+    padding: 20px 15px 25px
+    width: 100%
+    box-sizing: border-box
+    background-color: #ffae00
+
+
+  .modalDesc
+    padding: 30px
+    p
+      color: #ffffff
+      font-family: $open
+      font-size: 17px
+      font-weight: 300
+      line-height: 21px
+      span
+        text-decoration: line-through
+    form
+      @extend %clear-fix
+      margin-top: 30px
+      i
+        color: white
+      .el__input
+        input
+          border-color: white
+          color: white
+      .left__form
+        padding-right: 9px
+        width: 50%
+        float: left
+        box-sizing: border-box
+        @media (max-width: $screen-xs-max)
+          width: 100%
+          float: none
+          padding-right: 0
+
+      .right__form
+        padding-left: 9px
+        width: 50%
+        float: left
+        box-sizing: border-box
+        @media (max-width: $screen-xs-max)
+          width: 100%
+          float: none
+          padding-left: 0
+      .fa-home
+        font-size: 18px
+        left: 16px
+      .fa-user
+        font-size: 18px
+        left: 16px
+      .fa-mobile
+        font-size: 24px
+        left: 18px
+        top: 10px
+      .fa-envelope-o
+        font-size: 18px
+        left: 15px
+        top: 13px
+      .fa-instagram
+        font-size: 18px
+        left: 16px
+        top: 14px
+      .fa-info-circle
+        font-size: 18px
+        left: 16px
+        top: 14px
+      .fa-pencil
+        font-size: 18px
+        left: 16px
+        top: 16px
+      .checkbox-btn
+        color: #fff
+        font-family: $open
+        font-size: 16px
+        font-weight: 300
+        @media (max-width: $screen-xs-max)
+          display: none
+      button
+        float: right
+        width: 222px
+        height: 43px
+        background-color: #ffae00
+        color: #383838
+        font-family: $open
+        font-size: 18px
+        font-weight: 300
+        line-height: 43px
+        border-radius: 43px
+        @media (max-width: $screen-xs-max)
+          float: none
+
+
+
+
+

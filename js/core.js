@@ -18,6 +18,33 @@ function isOnPage(selector) {
     return ($(selector).length) ? $(selector) : false;
 }
 
+
+$(window).scroll(function(){
+    var $elem = $('.header'),
+        $top = $(this).scrollTop();
+
+    if ($top < 10) {
+        $elem.removeClass('fixed')
+    } else {
+        $elem.addClass('fixed')
+    }
+});
+
+$('.list-link').on('mouseover', 'li', function (e) {
+    e.preventDefault();
+    $('.list-link li').css('opacity', '0.5');
+    $(this).css('opacity', '1');
+    console.log('----- ' + 1);
+
+});
+
+$('.list-link').on('mouseout', 'li', function (e) {
+    e.preventDefault();
+    $('.list-link li').css('opacity', '1');
+    console.log('----- ' + 2);
+
+});
+
 // custom jQuery validation
 //-----------------------------------------------------------------------------------
 var validator = {
@@ -151,25 +178,64 @@ var valitatorRules = {
 
 // custom rules
 //-----------------------------------------------------------------------------------
-$.validator.addMethod("email", function(value) {
-    if (value == '') return true;
-    var regexp = /[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
-    return regexp.test(value);
-});
-
-$.validator.addMethod("letters", function(value, element) {
-    return this.optional(element) || /^[^1-9!@#\$%\^&\*\(\)\[\]:;,.?=+_<>`~\\\/"]+$/i.test(value);
-});
-
-$.validator.addMethod("digits", function(value, element) {
-    return this.optional(element) || /^(\+?\d+)?\s*(\(\d+\))?[\s-]*([\d-]*)$/i.test(value);
-});
-
-$.validator.addMethod("valueNotEquals", function(value, element) {
-    if (value == "") return false
-    else return true
-});
+// $.validator.addMethod("email", function(value) {
+//     if (value == '') return true;
+//     var regexp = /[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+//     return regexp.test(value);
+// });
+//
+// $.validator.addMethod("letters", function(value, element) {
+//     return this.optional(element) || /^[^1-9!@#\$%\^&\*\(\)\[\]:;,.?=+_<>`~\\\/"]+$/i.test(value);
+// });
+//
+// $.validator.addMethod("digits", function(value, element) {
+//     return this.optional(element) || /^(\+?\d+)?\s*(\(\d+\))?[\s-]*([\d-]*)$/i.test(value);
+// });
+//
+// $.validator.addMethod("valueNotEquals", function(value, element) {
+//     if (value == "") return false
+//     else return true
+// });
 
 //  validator init
 //-----------------------------------------------------------------------------------
 validator.init();
+
+//jQuery to collapse the navbar on scroll
+$(window).scroll(function () {
+    var item = $(".header");
+    if (item.offset().top > 10) {
+        item.addClass("fixed");
+    } else {
+        item.removeClass("fixed");
+    }
+
+    ScrollMenu();
+});
+
+//jQuery for page scrolling feature - requires jQuery Easing plugin
+$(function () {
+    $(document).on('click', 'a.page-scroll', function (event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top -40
+        }, 1000, 'easeInOutExpo');
+        event.preventDefault();
+    });
+});
+
+
+function ScrollMenu() {
+    var scrollPos = $(document).scrollTop() +40;
+    $('.js-navigation a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('.js-navigation ul li a').removeClass("active");
+            currLink.addClass("active");
+        }
+        else {
+            currLink.removeClass("active");
+        }
+    });
+}

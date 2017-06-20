@@ -131,24 +131,24 @@ var valitatorRules = {
 
 // custom rules
 //-----------------------------------------------------------------------------------
-$.validator.addMethod("email", function(value) {
-    if (value == '') return true;
-    var regexp = /[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
-    return regexp.test(value);
-});
-
-$.validator.addMethod("letters", function(value, element) {
-    return this.optional(element) || /^[^1-9!@#\$%\^&\*\(\)\[\]:;,.?=+_<>`~\\\/"]+$/i.test(value);
-});
-
-$.validator.addMethod("digits", function(value, element) {
-    return this.optional(element) || /^(\+?\d+)?\s*(\(\d+\))?[\s-]*([\d-]*)$/i.test(value);
-});
-
-$.validator.addMethod("valueNotEquals", function(value, element) {
-    if (value == "") return false
-    else return true
-});
+// $.validator.addMethod("email", function(value) {
+//     if (value == '') return true;
+//     var regexp = /[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+//     return regexp.test(value);
+// });
+//
+// $.validator.addMethod("letters", function(value, element) {
+//     return this.optional(element) || /^[^1-9!@#\$%\^&\*\(\)\[\]:;,.?=+_<>`~\\\/"]+$/i.test(value);
+// });
+//
+// $.validator.addMethod("digits", function(value, element) {
+//     return this.optional(element) || /^(\+?\d+)?\s*(\(\d+\))?[\s-]*([\d-]*)$/i.test(value);
+// });
+//
+// $.validator.addMethod("valueNotEquals", function(value, element) {
+//     if (value == "") return false
+//     else return true
+// });
 
 //  validator init
 //-----------------------------------------------------------------------------------

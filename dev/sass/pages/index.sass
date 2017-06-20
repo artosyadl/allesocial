@@ -9,11 +9,13 @@
     padding-top: 135px
     box-sizing: border-box
     text-align: center
+    padding-bottom: 120px
 
   .list-link
     display: inline-block
     @extend %clear-fix
     font-size: 0
+    margin-bottom: 55px
 
     li
       float: left
@@ -23,7 +25,14 @@
       width: 200px
       height: 235px
       border-radius: 6px
+      transition: all 0.3s
       background-color: rgba(#212121, 0.53)
+      @media (max-width: $screen-xs-max)
+        width: 100%
+        float: none
+        height: auto
+        margin-bottom: 20px
+        text-align: center
       &:last-child
         margin-right: 0
       &:before
@@ -52,7 +61,10 @@
         position: absolute
         bottom: 0
         left: 26px
-        margin-bottom: 28px
+        margin-bottom: 26px
+        @media (max-width: $screen-xs-max)
+          position: static
+          margin-top: 20px
   h1
     text-shadow: 3px 4px 27px #000000
     color: #ffffff
@@ -61,20 +73,130 @@
     text-transform: uppercase
     font-size: 48px
     line-height: 45px
-    margin-bottom: 40px
+    margin-bottom: 45px
+    @media (max-width: $screen-sm-max)
+      font-size: 18px
+      line-height: 28px
     span
       font-size: 60px
+      display: block
+      margin-top: 20px
+      @media (max-width: $screen-sm-max)
+        font-size: 24px
+        line-height: 28px
+        margin-top: 10px
 
 .cont-bg
   background: #f3f3f3 url(../images/bg-cont.png) no-repeat center/cover
+
+.wrap-company
+  box-shadow: 0 0 29px rgba(0, 0, 0, 0.28)
+  border-radius: 8px
+  background-color: #ffffff
+  width: 100%
+  padding: 10px 30px 0
+  box-sizing: border-box
+  text-align: center
+  overflow: hidden
+  margin-top: -35px
+
+  hr
+    background-color: #c1c1c1
+    opacity: 0.57
+    height: 1px
+    border: none
+    margin: 5px 0 30px
+
+  .text-style-1
+    padding: 0 15px
+    @media (max-width: $screen-xs-max)
+      padding: 0
+
+  .list__services
+    margin-top: 40px
+    margin-left: -30px
+    margin-right: -30px
+    @extend %clear-fix
+
+    .services
+      position: relative
+      width: 25%
+      float: left
+      height: 162px
+      text-align: center
+      @media (max-width: $screen-xs-max)
+        width: 100%
+      &:before
+        content: ''
+        display: inline-block
+        position: absolute
+        width: 100%
+        height: 100%
+        background-color: #303030
+        opacity: 0.55
+        top: 0
+        left: 0
+        z-index: 0
+        transition: all 0.2s
+
+      &:hover
+        &:before
+          opacity: 0.8
+
+      .img__wrap
+        position: relative
+        z-index: 1
+        width: 63px
+        height: 63px
+        line-height: 63px
+        margin-bottom: 17px
+        margin-top: 30px
+        display: inline-block
+        img
+          vertical-align: middle
+          max-width: 100%
+          height: auto
+
+      p
+        position: relative
+        z-index: 1
+        width: 100%
+        text-align: center
+        color: #ffffff
+        font-family: $open
+        font-size: 24px
+        font-weight: 300
+        line-height: 21px
+
+.how-it-works
+  padding-top: 45px
+  padding-bottom: 70px
+  text-align: center
+  .el__title
+    margin-bottom: 10px
+  .wrap-center
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.09)
+    border-radius: 8px
+    background-color: #ffffff
+    width: 100%
+    box-sizing: border-box
+    padding: 25px
+    text-align: left
+    margin-top: 30px
+
+    .text-style-1
+      margin-bottom: 10px
+
 .prising
   position: relative
+  padding-top: 15px
+  text-align: center
+  margin-bottom: 70px
   &:before, &:after
     content: ''
     width: 100%
-    height: 300px
+    height: 325px
     position: absolute
-    z-index: 0
     display: inline-block
     left: 0
     top: 0
@@ -92,21 +214,163 @@
   .container
     position: relative
     z-index: 1
+
+  .table__wrapper
+    margin: 45px auto 0
+    width: 100%
+    background-color: #f2f2f2
+    max-width: 1100px
+    display: block
+    overflow-x: auto
+    overflow-y: hidden
+    border-radius: 8px
+    position: relative
+    z-index: 1
+
+  .btn
+    display: inline-block
+    width: 100%
+    max-width: 789px
+    height: 80px
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.24)
+    border-radius: 8px
+    background-color: #ffd200
+    color: #444444
+    font-family: $open
+    font-size: 18px
+    font-weight: 600
+    text-transform: uppercase
+    transform: translateY(-20px)
+    box-sizing: border-box
+    padding-top: 37px
+    img
+      margin-left: 8px
+    &:hover
+      text-decoration: none
+
 .contact
+  padding-top: 20px
   color: white
   position: relative
   background: url(../images/bg-contact.png) no-repeat center/cover
   .el__title
     color: white
-    margin-bottom: 45px
+    margin-bottom: 15px
+    margin-top: 50px
   .text-style-1
     color: white
   .list-cont
+    margin-top: 28px
     opacity: 0.89
     color: #ffffff
     font-family: $open
     font-size: 21px
     font-weight: 300
+    a:hover
+      text-decoration: none
+      color: #ffae00
+
+    li
+      margin-bottom: 12px
+
+    i
+      color: #ffae00
+      margin-right: 12px
+      &.fa-envelope
+        font-size: 20px
+      &.fa-instagram
+        font-size: 22px
+  .nav
+    @extend %clear-fix
+    display: inline-block
+    @media (max-width: $screen-xs-max)
+      display: none
+    li
+      float: left
+      margin-right: 30px
+      &:last-child
+        margin-right: 0
+    a:hover
+      text-decoration: none
+      color: #ffae00
+    a
+      color: #ffffff
+      font-family: $open
+      font-size: 18px
+      font-weight: 300
+      line-height: 35px
+      display: inline-block
+      text-align: center
+      &.coll
+        border-radius: 35px
+        width: 130px
+        height: 35px
+        text-decoration: none
+        border: 1px solid #ffae00
+        &:hover
+          background-color: #ffc000
+          color: white
+
+  form
+    @extend %clear-fix
+    margin-top: 155px
+    margin-bottom: 45px
+    @media (max-width: $screen-sm-max)
+      margin-top: 30px
+    .left__form
+      float: left
+      box-sizing: border-box
+      padding-right: 18px
+      width: 45%
+      @media (max-width: $screen-xs-max)
+        width: 100%
+        float: none
+        padding-right: 0
+    .right__form
+      @extend %clear-fix
+      width: 55%
+      float: left
+      @media (max-width: $screen-xs-max)
+        width: 100%
+        float: none
+    .fa-user
+      font-size: 18px
+      left: 16px
+    .fa-mobile
+      font-size: 24px
+      left: 18px
+      top: 10px
+    .fa-envelope-o
+      font-size: 18px
+      left: 15px
+      top: 13px
+    .fa-instagram
+      font-size: 18px
+      left: 16px
+      top: 14px
+    .fa-info-circle
+      font-size: 18px
+      left: 16px
+      top: 14px
+    .fa-pencil
+      font-size: 18px
+      left: 16px
+      top: 16px
+
+    button
+      float: right
+      width: 222px
+      height: 43px
+      background-color: #ffae00
+      color: #383838
+      font-family: $open
+      font-size: 18px
+      font-weight: 300
+      line-height: 43px
+      border-radius: 43px
+      @media (max-width: $screen-xs-max)
+        float: none
+
 
 .text-style-1
   color: #4f4f4f
@@ -115,17 +379,23 @@
   font-weight: 300
   line-height: 24px
   margin-bottom: 6px
+  @media (max-width: $screen-sm-max)
+    font-size: 16px
+    line-height: 20px
   a
     text-decoration: underline
     &:hover
       text-decoration: none
 
 .list-style
+  border-top: 1px dashed #cdcdcd
   color: #4f4f4f
   font-family: $open
   font-size: 18px
   font-weight: 300
   line-height: 30px
+  margin: 20px -25px 0
+  padding: 25px 25px 0
   i
     color: #ffc000
     margin-right: 5px
@@ -133,6 +403,7 @@
     line-height: 30p
 
 table
+  width: 100%
   .none
     color: #ee7146
     font-size: 18px
@@ -150,9 +421,37 @@ table
     font-weight: 700
     line-height: 21px
     text-transform: uppercase
+    background-color: #ffc000
+    padding: 20px 5px
+    &:nth-child(2n)
+      background-color: #fff000
   td
+    vertical-align: middle
     color: #4f4f4f
     font-family: $open
     font-size: 18px
     font-weight: 400
     line-height: 21px
+    padding: 10px 5px
+    &:first-child
+      background-color: #7c7c7c
+      color: white
+    &:nth-child(3)
+      background-color: #e7dab4
+    &:nth-child(2n)
+      background-color: #e6e6e6
+    &:last-child
+      background-color: #e7dab4
+
+  tbody
+    tr
+      &:nth-child(2n) td
+        background-color: #f2f2f2
+
+        &:first-child
+          background-color: #818181
+          color: white
+        &:nth-child(3)
+          background-color: #eee1bb
+        &:last-child
+          background-color: #eee1bb
