@@ -30,20 +30,20 @@ $(window).scroll(function(){
     }
 });
 
-$('.list-link').on('mouseover', 'li', function (e) {
-    e.preventDefault();
-    $('.list-link li').css('opacity', '0.5');
-    $(this).css('opacity', '1');
-    console.log('----- ' + 1);
-
-});
-
-$('.list-link').on('mouseout', 'li', function (e) {
-    e.preventDefault();
-    $('.list-link li').css('opacity', '1');
-    console.log('----- ' + 2);
-
-});
+// $('.list-link').on('mouseover', 'li', function (e) {
+//     e.preventDefault();
+//     $('.list-link li').css('opacity', '0.5');
+//     $(this).css('opacity', '1');
+//     console.log('----- ' + 1);
+//
+// });
+//
+// $('.list-link').on('mouseout', 'li', function (e) {
+//     e.preventDefault();
+//     $('.list-link li').css('opacity', '1');
+//     console.log('----- ' + 2);
+//
+// });
 
 // custom jQuery validation
 //-----------------------------------------------------------------------------------
